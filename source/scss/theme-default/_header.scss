@@ -1,0 +1,215 @@
+/* ====================================   Header's style   ==================================== */
+
+#site-header {
+    margin-bottom: 20px;
+    @include clearfix();
+    z-index: 2;
+}
+
+
+/* desktop site header  */
+
+#desktop-site-header {
+    .top-bar {
+        @include clearfix();
+        background-color: #eee;
+        @include font-size(12, 35);
+        color: #939597;
+    }
+    .linked-sites {
+        float: left;
+        li {
+            float: left;
+            margin-left: 20px;
+            a {
+                color: #939597
+            }
+        }
+    }
+    .search-box {
+        float: left;
+        margin-left: 10px;
+        margin-top: 5px;
+        position: relative;
+        input {
+            font-size: 10px;
+            height: 20px;
+            border: 1px solid #ddd;
+            background: white;
+            color: #bbb;
+            width: 160px;
+            padding: 0 10px 0 24px;
+            float: left;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        button {
+            float: left;
+            margin-left: 2px;
+            border: 1px solid #ddd;
+            background: white;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            font-size: 10px;
+            line-height: 18px;
+            padding: 0 5px;
+            height: 20px;
+            text-transform: uppercase;
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+        .icon-search {
+            position: absolute;
+            top: 4px;
+            left: 5px;
+        }
+    }
+    .site-header-content {
+        padding: 20px 0;
+        @include clearfix;
+        .logo {
+            float: left;
+            img {
+                height: 70px;
+                width: auto;
+            }
+        }
+    }
+}
+
+.site-header {
+    &__qc {
+        float: right;
+        .qc {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.navigation {
+    background: #DBDCDE;
+    position: relative;
+    > ul {
+        @include clearfix();
+        > li {
+            @include font-size(14, 35);
+            float: left;
+            @include transition(all, 0.2, ease-out);
+            &:hover,
+            &.active {
+                background-color: white;
+                > a {
+                    color: $brand-primary;
+                }
+            }
+            &:hover {
+                .mega-menu {
+                    opacity: 1;
+                    z-index: 11;
+                    padding-top: 20px;
+                    max-height: 1000px;
+                }
+            }
+            > a {
+                display: block;
+                padding: 0 9px;
+            }
+            &.search-btn {
+                position: relative;
+                cursor: pointer;
+                .fa-search {
+                    color: white;
+                    padding: 0 15px;
+                    line-height: 35px;
+                    display: block;
+                }
+                .search-open {
+                    background-color: darken($brand-primary, 5%);
+                    opacity: 0;
+                    @include transition(padding-top, 0.5, ease-out);
+                    overflow: hidden;
+                    padding: 0 15px;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 500px;
+                    z-index: -2;
+                    &.show {
+                        display: block;
+                        opacity: 1;
+                        z-index: 2;
+                        padding: 20px 15px;
+                        max-height: 1000px;
+                        text-align: right;
+                        .form-control,
+                        .btn {
+                            display: inline-block;
+                            margin-right: 10px;
+                            width: 370px;
+                            float: left;
+                        }
+                        .btn {
+                            width: 90px;
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mega-menu {
+        @include clearfix;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        max-height: 0;
+        z-index: -2;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        @include transition(padding-top, 0.5, ease-out);
+        box-shadow: 0 5px 7px 0 rgba(0, 0, 0, .4);
+        .sub-cate-listing {
+            float: left;
+            width: 220px;
+            margin-right: 10px;
+            @include font-size(14, 19);
+            padding: 10px;
+            background-color: #F1F2F2;
+            border-right: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            li {
+                margin-bottom: 10px;
+                text-align: right;
+            }
+            .fa {
+                margin-right: 10px;
+            }
+            &::after {
+                z-index: -1;
+                content: '';
+                display: block;
+                width: 220px;
+                position: absolute;
+                top: 21px;
+                left: 0;
+                bottom: 0;
+                border-right: 1px solid #ddd;
+                background: #f1f2f2;
+            }
+        }
+        &__listing {
+            padding-right: 10px;
+            width: 80%;
+            float: right;
+        }
+        .story {
+            width: 25%;
+            float: left;
+            padding: 0 10px;
+        }
+    }
+}

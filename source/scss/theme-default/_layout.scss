@@ -1,0 +1,205 @@
+/* site-wrap */
+
+.site-wrap {
+    @include clearfix;
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    .area--featured & {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1159px) {
+    html {
+        width: 1180px;
+    }
+}
+
+#site-content {
+    @include clearfix;
+    margin-bottom: 20px;
+}
+
+.zone {
+    margin-bottom: 30px;
+}
+
+
+/* home slider */
+
+.slider-zone {
+    .bx-wrapper {
+        max-width: 100% !important;
+    }
+}
+
+.main-content {
+    @include respond-to-xs {
+        margin-bottom: 20px;
+    }
+}
+
+.area {
+    &--abf {
+        @include clearfix;
+    }
+    &__highlight {
+        width: 840px;
+        float: left;
+    }
+    &__sidebar {
+        width: 300px;
+        float: right;
+    }
+    &--featured {
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: #58585b;
+        border-top: 6px solid $brand-primary;
+        .zone {
+            >header {
+                .zone-title {
+                    // line-height: 32px;
+                    a {
+                        color: #DD3331;
+                        &:hover {
+                            color: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--meeting {
+        @include clearfix;
+        .zone-page {
+            width: 260px;
+            float: left;
+            margin-right: 15px;
+        }
+        .zone-qc {
+            float: right;
+            width: 316px;
+        }
+        .qc {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        & + .qc {
+            margin-top: 20px;
+        }
+    }
+    &--category-highlight {
+        @include clearfix;
+        margin-bottom: 15px;
+    }
+}
+
+.highlight {
+    &--story {
+        width: 565px;
+        float: left;
+        border-right: 1px solid #ddd;
+        padding-right: 10px;
+    }
+    &--col {
+        width: 265px;
+        float: right;
+    }
+}
+
+
+/* top zone */
+
+.top-zone {
+    @include clearfix;
+    &__sub-col {
+        width: 460px;
+        float: left;
+        margin-right: 25px;
+    }
+    &__main-col {
+        width: 495px;
+        float: left;
+    }
+    &__aside-col {
+        width: 160px;
+        float: right;
+    }
+    .story-bold {
+        width: 335px;
+        float: left;
+    }
+    .zone-top-story {
+        width: 140px;
+        float: right;
+    }
+    .zone--special {
+        .story-bold {
+            width: initial;
+            float: none;
+        }
+    }
+}
+
+.row {
+    &--narrow {
+        margin-left: -10px;
+        margin-right: -10px;
+        [class*="col-xs"],
+        [class*="col-sm"],
+        [class*="col-md"],
+        [class*="col-lg"] {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+.category {
+    &__main-col {
+        @include clearfix;
+        width: 560px;
+        float: left;
+        .story-listing {
+            width: 100%;
+            float: none;
+        }
+    }
+    &__aside-col {
+        width: 580px;
+        float: right;
+        @include clearfix;
+        .story-listing {
+            width: 250px;
+            float: left;
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+        .story-listing.scrollbar-outer {
+            max-height: 520px;
+        }
+        .zone-content.scrollbar-outer {
+            max-height: 487px;
+        }
+    }
+    &__qc-col {
+        width: 300px;
+        float: right;
+    }
+    &__medium-col {
+        width: 380px;
+        float: left;
+    }
+    &__small-col {
+        width: 160px;
+        float: right;
+    }
+}
+
+.main-article-wrap {
+    margin-bottom: 20px;
+}

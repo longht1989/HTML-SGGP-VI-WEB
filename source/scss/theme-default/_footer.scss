@@ -1,0 +1,80 @@
+/* ====================================
+   Footer's style
+   ==================================== */
+
+#site-footer {
+    .container {}
+    .sethomepage {
+        display: block;
+        background: #E6E7E8;
+        padding: 3px 5px;
+        line-height: 25px;
+    }
+    .gotop {
+        background: #6D6E70;
+        display: inline-block;
+        padding: 3px 5px;
+        color: white;
+        line-height: 25px;
+    }
+}
+
+.site-footer {
+    &__info {
+        @include clearfix;
+        padding-bottom: 15px;
+    }
+    &--sub-cate {
+        .site-footer__info {
+            padding-top: 15px;
+            border-top: 1px solid #777;
+        }
+    }
+    &__logo {
+        width: 155px;
+        float: left;
+    }
+    &__coloumn {
+        float: left;
+        width: 325px;
+        border-left: 1px solid #ddd;
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+    &__text,
+    &__tool {
+        margin-bottom: 5px;
+        @include font-size(10, 14);
+        b {
+            color: #111;
+        }
+    }
+    &__menu {
+        @include clearfix;
+        padding: 20px 50px;
+        background-color: #58585B;
+        margin-bottom: 20px;
+        ul {
+            margin-left: -10px;
+            margin-right: -10px;
+            font-size: 0;
+        }
+        li {
+            display: inline-block;
+            width: 20%;
+            padding: 0 10px;
+            margin: 10px 0;
+            font-family: $font-family-special;
+            @include font-size(14, 19);
+            text-transform: uppercase;
+            vertical-align: top;
+            a {
+                display: block;
+                color: white;
+                &:hover {
+                    color: #aaa;
+                }
+            }
+        }
+    }
+}
