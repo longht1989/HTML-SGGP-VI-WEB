@@ -86,6 +86,16 @@ $(function() {
         nextSelector: '#qc-slider-next',
         prevSelector: '#qc-slider-prev'
     });
+    /*demo slider 05 */
+    $('#slider-demo-05').bxSlider({
+        maxSlides: 1,
+        minSlides: 1,
+        nextText: '',
+        prevText: '',
+        nextSelector: '#demo-slider-next-05',
+        prevSelector: '#demo-slider-prev-05',
+        pager: 0
+    });
 });
 
 /*scrool to top */

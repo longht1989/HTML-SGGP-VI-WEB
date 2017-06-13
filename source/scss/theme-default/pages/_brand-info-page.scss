@@ -1,0 +1,50 @@
+.brand-info-page {
+    .breadcrumb {
+        > .active {
+            color: $brand-info;
+            a {
+                color: $brand-info;
+            }
+        }
+    }
+    .zone {
+        > header {
+            .zone-title {
+                a {
+                    color: $brand-info;
+                    &::before {
+                        background: $brand-info;
+                    }
+                }
+            }
+        }
+        &.zone-video {
+            > header {
+                background: $brand-info;
+                .zone-title {
+                    a {
+                        background: transparent;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .category__aside-col {
+        .category__content-col {
+            width: 250px;
+            float: left;
+        }
+        .story-listing.scrollbar-outer {
+            max-height: 315px;
+            float: none;
+            width: initial;
+        }
+        .zone-slider {
+            margin-top: 20px;
+        }
+    }
+    .zone.zone-slider .slider-control [class*=icon-] {
+        top: 35%;
+    }
+}

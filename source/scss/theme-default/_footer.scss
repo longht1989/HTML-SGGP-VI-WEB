@@ -75,6 +75,11 @@
                     color: #aaa;
                 }
             }
+            &.brand-info-cate {
+                a {
+                    color: $brand-info;
+                }
+            }
         }
     }
 }
