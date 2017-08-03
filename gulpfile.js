@@ -57,7 +57,12 @@ gulp.task('scripts', function() {
 // styles task
 gulp.task('styles', function() {
     gulp.src(paths.scss_dev + '/styles.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(plumber({
+            errorHandler: function(err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
         .pipe(sourcemaps.init())
         .pipe(sass())
         // .pipe(gulp.dest(paths.css)) // make normal css for debug
