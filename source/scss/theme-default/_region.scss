@@ -467,7 +467,9 @@
         }
     }
     &--voting {
-        background: #c9eafb;
+        background: none;
+        padding: 0;
+        margin-bottom: 10px;
         .box__title {
             font-size: 18px;
             line-height: 22px;
