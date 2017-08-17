@@ -2,13 +2,11 @@
    All region in project
    ==================================== */
 
-
-/* zone global style */
-
+// zone global style
 .zone {
     @include clearfix;
     margin-bottom: 20px;
-    > header {
+    >header {
         margin-bottom: 10px;
         .zone-title {
             font-family: $font-family-special;
@@ -37,7 +35,7 @@
             }
         }
     }
-    // zone with green title
+    /* zone with green title */
     &.green-title {
         background-color: #ddd;
         >header {
@@ -99,9 +97,7 @@
         .zone-content {
             position: relative;
         }
-        .bx-viewport {
-            // margin-bottom: 10px;
-        }
+        .bx-viewport {}
         .bx-pager {
             text-align: center;
             .bx-pager-item {
@@ -171,7 +167,7 @@
             }
         }
     }
-    // slider with caption
+    /* slider with caption */
     .slider-caption {
         li {
             position: relative;
@@ -186,7 +182,7 @@
             }
         }
     }
-    // ads in zone
+    /* ads in zone */
     .zone-ads {
         margin-top: 10px;
     }
@@ -196,7 +192,7 @@
     &-meeting {
         >header {
             background-color: #939597;
-            // padding-left: 30px;
+
             .zone-title {
                 border-top: none;
                 line-height: 27px;
@@ -235,7 +231,7 @@
         }
     }
     &--special {
-        > header {
+        >header {
             float: left;
             margin-bottom: 0;
             .zone-title {
@@ -329,8 +325,7 @@
 }
 
 
-/* event zone */
-
+// event zone
 .event-zone {
     .zone-title {
         margin-bottom: 10px;
@@ -349,8 +344,7 @@
 }
 
 
-/* .story-listing  */
-
+// .story-listing 
 .story-listing {
     .story {
         margin-bottom: 20px;
@@ -358,8 +352,7 @@
 }
 
 
-/* top zone */
-
+// top zone
 .top-zone {
     padding-top: 20px;
     border-top: 1px solid #ddd;
@@ -383,7 +376,6 @@
 }
 
 .qc {
-    // background: #f1f1f1;
     margin-bottom: 20px;
     text-align: center;
     .adsitem {
@@ -415,8 +407,7 @@
 }
 
 
-/* box */
-
+// box
 .box {
     margin-bottom: 2px;
     @include clearfix;
@@ -473,6 +464,49 @@
         padding: 0 1px;
         @include haf() {
             outline: none;
+        }
+    }
+    &--voting {
+        background: #c9eafb;
+        .box__title {
+            font-size: 18px;
+            line-height: 22px;
+            color: #13b2df;
+            font-family: $font-family-special;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+            position: relative;
+            a {
+                color: #2babe2;
+            }
+            &:hover {
+                color: #2796c5;
+                a {
+                    color: #2796c5;
+                }
+            }
+        }
+        .question {
+            font-size: 12px;
+            line-height: 17px;
+            margin-bottom: 5px;
+        }
+        .answer {
+            font-size: 12px;
+            line-height: 1.4em;
+            input {
+                margin-right: 3px;
+            }
+        }
+    }
+    .action-submit {
+        margin-top: 5px;
+    }
+    .btn {
+        font-size: 10px;
+        padding: 2px 4px;
+        &+.btn {
+            margin-left: 5px;
         }
     }
 }
