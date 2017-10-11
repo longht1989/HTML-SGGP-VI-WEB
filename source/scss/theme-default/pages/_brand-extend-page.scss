@@ -1,0 +1,36 @@
+.brand-extend-page {
+    .breadcrumb {
+        >.active {
+            color: $brand-extend;
+            a {
+                color: $brand-extend;
+            }
+        }
+    }
+    .category__main-col {
+        width: 504px;
+    }
+    .category__aside-col {
+        width: 636px;
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
+            .col-xs-6 {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+    .box {
+        &-ads {
+            @include clearfix;
+        }
+        &__header {
+            font-size: 16px;
+            background: $brand-extend;
+            color: white;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
