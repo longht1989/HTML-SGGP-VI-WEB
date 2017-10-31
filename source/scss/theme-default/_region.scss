@@ -308,6 +308,24 @@
             margin-top: 5px;
         }
     }
+    &-green {
+        >header {margin-bottom: 0;
+            .zone-title {
+                border-top: none;
+                a {
+                    display: inline;
+                    padding: 0;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .zone-content {
+            padding: 10px 10px 10px 10px;
+            background: #c9e49d;
+        }
+    }
     &.category-mostview {
         >header {
             .zone-title {
