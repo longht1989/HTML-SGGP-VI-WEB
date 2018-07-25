@@ -270,6 +270,9 @@
             margin-left: 20px;
             width: 50%;
         }
+        table.quotes {
+            width: 100%;
+        }
         /* -------------- */
         .article-poll {
             margin-bottom: 20px;
@@ -358,6 +361,16 @@
                 float: right;
                 width: 50%;
                 margin-left: 10px;
+            }
+        }
+        table.notification {
+            width: 100%;
+            td {
+                padding: 10px;
+                p,
+                div {
+                    margin-bottom: 0;
+                }
             }
         }
         /* -------------- */
