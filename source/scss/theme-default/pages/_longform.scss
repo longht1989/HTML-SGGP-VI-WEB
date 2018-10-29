@@ -1,0 +1,52 @@
+/* article longform */
+.site-wrap {
+    &.is-full {
+        width: 100%;
+    }
+}
+
+.main-article.is-full {
+
+    .article-hdr {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .article-title,
+        .sub-article-title,
+        .summary {
+            text-align: center;
+        }
+    }
+
+    .article-content {
+
+        .content {
+
+            &>*,
+            table.notification {
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .full-img {
+                width: 100%;
+
+                &.pull-left {
+                    margin-left: -200px;
+                }
+
+                &.pull-right {
+                    margin-right: -200px;
+                }
+            }
+        }
+
+        .other-story {
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

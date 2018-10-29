@@ -132,6 +132,11 @@ gulp.task('default', ['copy', 'scripts', 'styles'],
         });
         gulp.watch(paths.js_dev + '/**/*.js', ['copyJs-UI', 'scripts']);
         gulp.watch(paths.scss_dev + '/**/*.scss', ['styles']);
-        gulp.watch(paths.html_dev + '/**/*.html', ['copyHtml']);
+        gulp.watch(paths.html_dev + '/**/*.html', function(obj) {
+            if (obj.type === 'changed') {
+                gulp.src(obj.path, { "base": paths.html_dev })
+                    .pipe(gulp.dest(paths.html));
+            }
+        }).on('change', browserSync.reload);
     }
 );
